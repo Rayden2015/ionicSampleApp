@@ -1,0 +1,6 @@
+{
+	"appId": "io.nurudin.ionicAppd",
+	"appName": "ionicApp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

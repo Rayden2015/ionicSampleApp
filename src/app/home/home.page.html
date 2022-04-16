@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+
+  <!-- Routing -->
+  <ion-button expand="full" routerLink="/list">Open List</ion-button>
+  <ion-button expand="full" (click)="openDetails()">Open Details</ion-button>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+
+  {{myVariable}}
+
+  <ion-button expand="full" (click)="updateValue()">Click Me !</ion-button>
+
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input type="text" [(ngModel)]="person.name"></ion-input>
+</ion-item>
+  <ion-item>
+  <ion-label position="floating">Age</ion-label>
+  <ion-input type="number" [(ngModel)]="person.age"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="loadPerson()">Load person</ion-button>
+  <ion-button expand="full" (click)="savePerson()">Save person</ion-button>
+
+
+  <ion-card>
+    <ion-card-title>Person Details</ion-card-title>
+    <ion-card-content>{{this.person | json}}</ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="captureImage()">Capture image</ion-button>
+  <img [src]="this.image">
+</ion-content>
+
